@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(m)\.example\.com
+RewriteRule ^([a-z0-9\-]+)$ index.php?subdomain=$1 [QSA]
+
+RewriteCond %{HTTP_HOST} ^([a-z0-9\-]+)\.example\.com
+RewriteRule ^index$ index.php?subdomain=%1 [QSA]
